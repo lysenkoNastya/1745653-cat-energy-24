@@ -5,7 +5,7 @@
     <title>Форма «Кэт энерджи»</title>
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
   </head>
-  <body>
+  <body class="body">
     <h1 class="visually-hidden">Форма «Кэт энерджи»</h1>
     <header class="header">
       <div class="header__wrapper">
@@ -92,13 +92,12 @@
                 <legend class="form-group__title">Контактные данные (владельца кота)</legend>
                 <ul class="form-group__list list-reset">
                   <li class="form-group__item">
-                    <label class="form-group__label">E-mail:*
+                    <label class="form-group__label email-icon">E-mail:*
                       <input class="form-group__input" type="email" placeholder="kuklachev@gmail.com" name="email" required>
                     </label>
                   </li>
                   <li class="form-group__item">
-                    <label class="form-group__label">
-                      <span class="control-label">Красный</span>сахарозаменительТелефон:*
+                    <label class="form-group__label phone-icon">Телефон:*
                       <input class="form-group__input" type="tel" placeholder="8 (960) 900-60-90" name="load" required>
                     </label>
                   </li>
@@ -106,9 +105,7 @@
               </fieldset>
               <fieldset class="form-group form-group--decor">
                 <legend class="form-group__title">Комментарий</legend>
-                <div class="form-group__textarea-wrapper">
-                  <textarea name="cat-habits" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
-                </div>
+                <textarea name="cat-habits" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
               </fieldset>
               <fieldset class="form-group form-group--decor">
                 <legend class="visually-hidden">Дополнительно</legend>
@@ -144,7 +141,7 @@
                 </ul>
                 <div class="submit-wrapper">
                   <button class="submit" type="submit">Отправить заявку</button>
-                  <span class="note">* — Обязательные поля</span>
+                  <span class="note"><sup>*</sup> — Обязательные поля</span>
                 </div>
               </fieldset>
             </form>
