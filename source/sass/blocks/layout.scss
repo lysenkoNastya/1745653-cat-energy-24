@@ -1,0 +1,31 @@
+.container {
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+
+  // @media (min-width: 768px) {
+  //   max-width: 720px;
+  // }
+
+  // @media (min-width: 992px) {
+  //   max-width: 900px;
+  // }
+
+  // @media (min-width: 1400px) {
+  //   max-width: 1320px;
+  // }
+}
+
+
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family:  Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  background-color: #ffffff;
+}

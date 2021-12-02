@@ -1,0 +1,45 @@
+.form-group__fieldset {
+  margin: 0;
+  padding: 25px 0;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  border: none;
+}
+
+.form-group__fieldset--decor:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+
+.form-group__item {
+  margin-bottom: 13px;
+}
+
+.form-group__label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.form-group__title {
+  padding: 0;
+  margin: 0;
+  padding-top: 25px;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.form-group__fieldset textarea  {
+  width: 100%;
+}
+
+.form-group__submit {
+  margin-bottom: 20px;
+}
+
+.form-group__note {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}

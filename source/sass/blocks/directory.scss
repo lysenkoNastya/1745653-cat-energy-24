@@ -1,0 +1,34 @@
+.directory__item {
+  padding: 21px 22px;
+  margin-bottom: 20px;
+  background-color: #F2F2F2;
+}
+
+.directory__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 37px;
+}
+
+.directory__text {
+  padding: 0;
+  padding-bottom: 25px;
+  margin: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #D9D9D9;
+  color: #444444;
+}
+
+.directory__link {
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000000;
+}
