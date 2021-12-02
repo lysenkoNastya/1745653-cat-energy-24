@@ -1,23 +1,23 @@
 .list-reset {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
   list-style-type: none;
-}
+  }
 
 .visually-hidden {
-	margin: -1px;
-	position: absolute;
-	clip: rect(0 0 0 0);
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
+  margin: -1px;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .section-title {
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
-  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
