@@ -1,6 +1,6 @@
 .example {
   padding: 20px 0 40px;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   color: #000000;
 }
 
@@ -16,7 +16,6 @@
 
 .example__text {
   margin-bottom: 20px;
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -25,7 +24,7 @@
 }
 
 .example__data-text {
-  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -36,7 +35,7 @@
 .example__costs {
   padding: 0;
   margin: 0;
-  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -55,7 +54,7 @@
 }
 
 .example__range-toggle {
-  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

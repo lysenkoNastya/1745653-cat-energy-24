@@ -3,8 +3,8 @@
   align-items: flex-end;
   padding: 45px 60px;
   background: url("../../img/icon_gift.svg") 50% 60px no-repeat,
-              linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-              url("../../img/order-everything-block.png") center no-repeat;
+    linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../../img/order-everything-block.png") center no-repeat;
   width: 280px;
   height: 290px;
   color: #ffffff;
@@ -15,21 +15,21 @@
   margin: 0;
   padding: 0;
   padding-bottom: 35px;
-  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 24px;
   color: #000000;
   text-transform: uppercase;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #cdcdcd;
 }
 
 .additional-product__item-title {
   margin: 0;
   padding: 0;
   margin-bottom: 15px;
-  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -45,7 +45,7 @@
 }
 
 .additional-product__text {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -55,5 +55,5 @@
 
 .additional-product__item {
   padding: 15px 0 20px;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid #cdcdcd;
 }

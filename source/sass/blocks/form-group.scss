@@ -1,14 +1,14 @@
 .form-group__fieldset {
   margin: 0;
   padding: 25px 0;
-  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   border: none;
 }
 
 .form-group__fieldset--decor:not(:last-child) {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000000;
 }
 
 .form-group__item {
@@ -30,7 +30,7 @@
   line-height: 26px;
 }
 
-.form-group__fieldset textarea  {
+.form-group__fieldset textarea {
   width: 100%;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .form-group__note {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
 }
