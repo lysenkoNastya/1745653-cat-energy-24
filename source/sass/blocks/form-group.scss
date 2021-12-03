@@ -2,8 +2,7 @@
   margin: 0;
   padding: 25px 0;
   font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   border: none;
 }
 
@@ -22,6 +21,10 @@
   color: #444444;
 }
 
+.form-group__radio-label {
+  color: #222222;
+}
+
 .form-group__title {
   padding: 0;
   margin: 0;
@@ -36,6 +39,8 @@
 
 .form-group__submit {
   margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .form-group__note {
