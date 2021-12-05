@@ -1,14 +1,15 @@
+.additional-product {
+  padding-bottom: 35px;
+}
+
 .additional-product__order-all {
+  padding: 65px 60px 45px;
   display: flex;
   align-items: flex-end;
-  padding: 45px 60px;
   background: url("../../img/icon_gift.svg") 50% 60px no-repeat,
     linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../../img/order-everything-block.png") center no-repeat;
-  width: 280px;
-  height: 290px;
+    url("../../img/order-everything-block.png") center/cover no-repeat;
   color: #ffffff;
-  box-sizing: border-box;
 }
 
 .additional-product__title {
@@ -36,13 +37,8 @@
   text-transform: uppercase;
 }
 
-.additional-product__text-wrapper {
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-
 .additional-product__text {
+  padding-top: 85px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -61,6 +57,7 @@
 }
 
 .additional-product__button {
+  margin-top: 15px;
   font-size: 16px;
   line-height: 20px;
 }
