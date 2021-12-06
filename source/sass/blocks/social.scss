@@ -1,0 +1,19 @@
+.social {
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+}
+
+.social__link {
+  display: inline-block;
+}
+
+.social__link--instagram {
+  margin: 0 20px;
+}
