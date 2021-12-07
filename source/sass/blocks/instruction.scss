@@ -1,17 +1,62 @@
+.instruction__list {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 230px);
+    column-gap: 153px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 230px);
+    column-gap: 94px;
+  }
+}
+
 .instruction__item {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding-left: 80px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+  position: relative;
 
-  &--leaf::before {
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: -1px;
     content: "";
-    display: inline-block;
-    color: #ffffff;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $basic_green;
     background-position: center center;
     background-repeat: no-repeat;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      position: inherit;
+    }
+  }
+
+  &--leaf::before {
+    background-image: url("../img/icon_leaf.svg");
+  }
+
+  &--tub::before {
+    background-image: url("../img/icon_tub.svg");
+  }
+
+  &--eat::before {
+    background-image: url("../img/icon_eat.svg");
+  }
+
+  &--alarm::before {
+    background-image: url("../img/icon_alarm.svg");
   }
 }

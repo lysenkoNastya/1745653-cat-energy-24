@@ -5,12 +5,30 @@
 .footer__wrapper {
   padding-top: 40px;
   padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
+    padding-bottom: 37px;
+  }
 }
 
 .footer__logo-catenergy {
   margin-bottom: 30px;
   text-align: center;
-  display: inline-block;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    display: inline-block;
+  }
 }
 
 .footer__copyright {

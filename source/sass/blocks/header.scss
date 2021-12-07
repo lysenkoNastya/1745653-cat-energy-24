@@ -2,8 +2,34 @@
   margin-bottom: 20px;
 }
 
+.header__wrapper {
+  padding: 10px 20px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 2fr 50px;
+  min-height: 65px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.header__wrapper-logo {
+  display: flex;
+  align-items: center;
+}
+
 .header__logo,
 .header__logo-catenergy {
   display: inline-block;
   cursor: pointer;
+}
+
+.header__logo {
+  margin-right: 55px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 15px;
+  }
 }
