@@ -1,3 +1,9 @@
+$basic_green: #68b738;
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;
+
 .list-reset {
   padding: 0;
   margin: 0;
@@ -5,11 +11,15 @@
 }
 
 .visually-hidden {
-  margin: -1px;
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 

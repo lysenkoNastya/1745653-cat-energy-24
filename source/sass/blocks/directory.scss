@@ -2,6 +2,13 @@
   margin-bottom: 20px;
 }
 
+.directory__list {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .directory__item {
   padding: 21px 22px;
   background-color: #f2f2f2;
@@ -33,4 +40,17 @@
   text-transform: uppercase;
   color: #000000;
   display: inline-block;
+}
+
+.directory__item-slim {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
 }

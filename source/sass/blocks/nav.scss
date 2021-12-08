@@ -1,12 +1,38 @@
 .nav {
-  border-top: 1px solid #e6e6e6;
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.nav__list {
+  display: none;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .nav__item {
   padding: 25px 0;
   text-align: center;
-  width: 100%;
+  width: auto;
   border-bottom: 1px solid #e6e6e6;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.nav__item:not(:last-child) {
+  @media (min-width: $tablet-width) {
+    margin-right: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 36px;
+  }
 }
 
 .nav__link {
@@ -17,4 +43,13 @@
   color: #000000;
   text-transform: uppercase;
   display: inline-block;
+}
+
+.nav__toggle {
+  height: 30px;
+  width: 24px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
