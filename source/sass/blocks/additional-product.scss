@@ -5,7 +5,7 @@
 .additional-product__wrapper {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 900px 245px;
+    grid-template-columns: 1fr 245px;
     column-gap: 80px;
   }
 }
@@ -66,15 +66,13 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 380px auto 100px;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto 100px;
     row-gap: 55px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 380px auto 100px 244px;
-    grid-template-rows: auto;
     row-gap: 0;
   }
 }
