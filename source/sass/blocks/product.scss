@@ -2,6 +2,22 @@
   margin-bottom: 25px;
 }
 
+.product__list {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 324px);
+    column-gap: 60px;
+    row-gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 63px;
+  }
+}
+
 .product__item {
   padding: 20px 0;
   border-bottom: 1px solid #ebebeb;
