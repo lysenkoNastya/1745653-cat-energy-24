@@ -1,5 +1,13 @@
 .directory {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .directory__list {
@@ -12,15 +20,64 @@
 .directory__item {
   padding: 21px 22px;
   background-color: #f2f2f2;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 300px 63px 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 53px 50px;
+    max-width: 570px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 25px;
+    top: 22px;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      right: 63px;
+      left: auto;
+      top: 150px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 70px;
+      height: 91px;
+      top: 55px;
+      left: 60px;
+    }
+  }
 }
 
 .directory__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  padding-left: 70px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 155px;
+    margin-bottom: 77px;
+  }
 }
 
 .directory__text {
@@ -30,9 +87,16 @@
   margin-bottom: 20px;
   border-bottom: 1px solid #d9d9d9;
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+  }
 }
 
 .directory__link {
+  padding-right: 50px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -40,10 +104,33 @@
   text-transform: uppercase;
   color: #000000;
   display: inline-block;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    content: "";
+    background-image: url("../img/icon_arrow.svg");
+    width: 32px;
+    height: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+  }
 }
 
 .directory__item-slim {
   margin-bottom: 20px;
+
+  &::before {
+    background-image: url("../img/cat_slim.png");
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 30px;
@@ -52,5 +139,15 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
     margin-right: 80px;
+  }
+}
+
+.directory__item-pro::before {
+  left: 10px;
+  background-image: url("../img/cat_pro.png");
+  width: 68px;
+
+  @media (min-width: $tablet-width) {
+    left: auto;
   }
 }
