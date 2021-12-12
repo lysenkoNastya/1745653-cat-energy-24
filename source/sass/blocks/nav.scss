@@ -1,11 +1,83 @@
 .nav {
   justify-self: flex-end;
   align-self: center;
+  width: auto;
+  min-height: 65px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  z-index: 2;
+  display: block;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 24px;
+  height: 1.5px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.nav--opened .nav__list {
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    top: 100%;
+    display: block;
+  }
+}
+
+.nav--opened .nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 9px;
+    width: 24px;
+    height: 1.5px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .nav__list {
-  display: none;
   width: 100%;
+  display: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -17,7 +89,15 @@
   padding: 25px 0;
   text-align: center;
   width: auto;
-  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -27,7 +107,7 @@
 
 .nav__item:not(:last-child) {
   @media (min-width: $tablet-width) {
-    margin-right: 15px;
+    margin-right: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -43,13 +123,26 @@
   color: #000000;
   text-transform: uppercase;
   display: inline-block;
-}
-
-.nav__toggle {
-  height: 30px;
-  width: 24px;
 
   @media (min-width: $tablet-width) {
-    display: none;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.nav__active {
+  @media (min-width: $tablet-width) {
+    padding-bottom: 15px;
+    box-shadow: 0 2px 0 0 $basic_green;
+  }
+
+  @media (min-width: $desktop-width) {
+    box-shadow: 0 2px 0 0 #ffffff;
   }
 }

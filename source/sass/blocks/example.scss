@@ -2,6 +2,32 @@
   padding: 20px 0 40px;
   background-color: #eaeaea;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, #ffffff 0 67%, #eaeaea 67% 100%);
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-bottom: 70px;
+    background: linear-gradient(to bottom, #ffffff 0 15%, #eaeaea 15% 100%);
+    background-color: #ffffff;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 450px 600px;
+    column-gap: 195px;
+  }
+}
+
+.example__title {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__text-wrapper {
@@ -12,11 +38,27 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: space-around;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+    margin-bottom: 55px;
+  }
+}
+
+.example__item:not(:last-child) {
+  @media (min-width: $tablet-width) {
+    margin-right: 66px;
+  }
 }
 
 .example__text {
+  margin: 0;
   margin-bottom: 20px;
   color: #444444;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .example__data-text {
@@ -27,6 +69,14 @@
   line-height: 24px;
   color: #000000;
   display: block;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .example__sub-text {
@@ -34,6 +84,11 @@
   line-height: 12px;
   color: #444444;
   display: block;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .example__costs {
@@ -45,10 +100,22 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 11px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    text-align: left;
+  }
 }
 
 .example__img-wrapper {
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .example__range-bar {
@@ -64,4 +131,16 @@
   text-transform: uppercase;
   border: none;
   background-color: transparent;
+}
+
+.example__expenses-wrapper {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 366px 180px;
+    column-gap: 167px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+  }
 }

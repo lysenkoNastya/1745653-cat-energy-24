@@ -1,4 +1,4 @@
-.form-group {
+.form-group__fieldset-wrapper {
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 570px);
@@ -17,8 +17,8 @@
 .form-group__contacts-list {
   @media (min-width: $desktop-width) {
     display: grid;
-    column-gap: 80px;
-    grid-template-columns: 570px auto;
+    column-gap: 90px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -109,8 +109,4 @@
     grid-template-columns: repeat(2, 570px);
     column-gap: 80px;
   }
-}
-
-.form-group__fieldset--full-width {
-  grid-column: 1/-1;
 }

@@ -1,3 +1,31 @@
+.address {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    background-color: #ffffff;
+  }
+}
+
+.address__position {
+  padding: 25px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 56px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 80px;
+    position: absolute;
+    content: "";
+    background-color: #ffffff;
+    color: #000000;
+    left: 110px;
+    top: 95px;
+    width: 565px;
+    height: 200px;
+  }
+}
+
 .address__map-wrapper {
   height: 362px;
 }
@@ -5,10 +33,11 @@
 .address__map-wrapper iframe {
   width: 100%;
   height: 100%;
+  display: block;
+  border: none;
 }
 
 .address__text-wrapper {
-  padding: 25px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -23,10 +52,22 @@
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
+  max-width: 140px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 160px;
+    text-align: left;
+  }
 }
 
 .address__text {
   margin: 0;
   padding: 0;
   justify-content: flex-end;
+  max-width: 140px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 173px;
+    text-align: right;
+  }
 }
