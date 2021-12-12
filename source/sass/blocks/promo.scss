@@ -5,9 +5,11 @@
   box-sizing: border-box;
 
   @media (min-width: $desktop-width) {
+    margin: 0 auto;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+    max-width: 1220px;
   }
 }
 
@@ -21,7 +23,6 @@
   color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    padding-left: 60px 0 0;
     margin-left: 100px;
     background-image: none;
     max-width: 460px;
@@ -79,7 +80,7 @@
     width: 244px;
     top: 240px;
     bottom: auto;
-    left: 230px;
+    left: 242px;
     right: auto;
   }
 }

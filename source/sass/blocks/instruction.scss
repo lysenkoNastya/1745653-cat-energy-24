@@ -14,6 +14,7 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 230px);
     column-gap: 153px;
+    counter-reset: section;
   }
 
   @media (min-width: $desktop-width) {
@@ -62,17 +63,16 @@
 
   &::after {
     @media (min-width: $tablet-width) {
+      counter-increment: section;
       position: absolute;
       right: 8px;
       top: -35px;
       display: block;
-      background-position: center center;
-      background-repeat: no-repeat;
-      cursor: pointer;
       color: #f2f2f2;
       font-size: 280px;
       line-height: 280px;
       z-index: -1;
+      content: counters(section, ".") "";
     }
   }
 
@@ -80,39 +80,15 @@
     background-image: url("../img/icon_leaf.svg");
   }
 
-  &--leaf::after {
-    @media (min-width: $tablet-width) {
-      content: "1";
-    }
-  }
-
   &--tub::before {
     background-image: url("../img/icon_tub.svg");
-  }
-
-  &--tub::after {
-    @media (min-width: $tablet-width) {
-      content: "2";
-    }
   }
 
   &--eat::before {
     background-image: url("../img/icon_eat.svg");
   }
 
-  &--eat::after {
-    @media (min-width: $tablet-width) {
-      content: "3";
-    }
-  }
-
   &--alarm::before {
     background-image: url("../img/icon_alarm.svg");
-  }
-
-  &--alarm::after {
-    @media (min-width: $tablet-width) {
-      content: "4";
-    }
   }
 }

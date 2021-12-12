@@ -138,11 +138,11 @@
 
 .nav__active {
   @media (min-width: $tablet-width) {
-    padding-bottom: 15px;
-    box-shadow: 0 2px 0 0 $basic_green;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $basic_green;
   }
 
   @media (min-width: $desktop-width) {
-    box-shadow: 0 2px 0 0 #ffffff;
+    border-bottom: 2px solid #ffffff;
   }
 }
