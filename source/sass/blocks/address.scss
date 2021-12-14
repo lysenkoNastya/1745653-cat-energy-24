@@ -1,13 +1,13 @@
 .address {
   position: relative;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     background-color: #ffffff;
   }
 }
 
 .address__position {
-  padding: 25px 0;
+  padding: 25px 20px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     padding: 56px 50px;
@@ -64,6 +64,8 @@
   @media (min-width: $tablet-width) {
     max-width: 160px;
     text-align: left;
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
@@ -76,5 +78,13 @@
   @media (min-width: $tablet-width) {
     max-width: 173px;
     text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.address__text-streat {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
   }
 }

@@ -128,12 +128,6 @@
     font-size: 18px;
     line-height: 24px;
   }
-
-  @media (min-width: $desktop-width) {
-    color: #ffffff;
-    font-size: 20px;
-    line-height: 30px;
-  }
 }
 
 .nav__active {
@@ -141,8 +135,18 @@
     padding-bottom: 10px;
     border-bottom: 2px solid $basic_green;
   }
+}
 
+.nav__index .nav__active {
   @media (min-width: $desktop-width) {
     border-bottom: 2px solid #ffffff;
+  }
+}
+
+.nav__index .nav__link {
+  @media (min-width: $desktop-width) {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
   }
 }

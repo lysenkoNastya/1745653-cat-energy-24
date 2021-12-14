@@ -1,5 +1,10 @@
 .additional-product {
-  padding-bottom: 35px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-bottom: 70px;
+  }
 }
 
 .additional-product__wrapper {
@@ -21,18 +26,58 @@
   background-position: 100px 60px, center, center;
   background-size: auto, auto, cover;
   color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 75px;
+    justify-content: flex-end;
+    background-position: 100px 100px, center, center;
+  }
 }
+
+.additional-product__title--decor {
+  padding: 0 20px;
+  background-color: #ffffff;
+  display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+    margin-left: -20px;
+    max-width: none;
+  }
+}
+
 
 .additional-product__title {
   margin: 0;
   padding: 0;
-  padding-bottom: 35px;
+  margin-bottom: 25px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   color: #000000;
-  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    right: -100vw;
+    transform: translateY(-50%);
+    background-color: $basic_green;
+    height: 2px;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      left: -100vw;
+    }
+  }
 }
 
 .additional-product__item-title {
@@ -58,22 +103,42 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    max-width: 170px;
+  }
+}
+
+.additional-product__list {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid #cdcdcd;
+  }
 }
 
 .additional-product__item {
   padding: 15px 0 20px;
-  border-bottom: 1px solid #cdcdcd;
+  border-top: 1px solid #cdcdcd;
 
   @media (min-width: $tablet-width) {
+    padding: 25px 40px;
     display: grid;
     grid-template-columns: 1fr auto 100px;
-    row-gap: 55px;
+    row-gap: 25px;
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 380px auto 100px 244px;
     row-gap: 0;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
