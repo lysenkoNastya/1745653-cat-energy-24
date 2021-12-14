@@ -68,9 +68,10 @@
       right: 8px;
       top: -35px;
       display: block;
-      color: #f2f2f2;
       font-size: 280px;
       line-height: 280px;
+      font-family: "Oswald", "Arial", sans-serif;
+      color: #f2f2f2;
       z-index: -1;
       content: counters(section, ".") "";
     }
