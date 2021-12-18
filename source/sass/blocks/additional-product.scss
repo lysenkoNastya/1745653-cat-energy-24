@@ -31,6 +31,27 @@
     padding: 60px 75px;
     justify-content: flex-end;
     background-position: 100px 100px, center, center;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/icon_gift.svg"),
+        linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/gift-block-cat-tablet.png");
+      background-repeat: no-repeat;
+      background-position: 90px 60px, center, center;
+      background-size: auto, auto, cover;
+      max-height: 200px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px;
+    background: url("../img/icon_gift.svg"),
+      linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/gift-block-cat-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 90px 60px, center, center;
+    background-size: auto, auto, cover;
+    max-height: 289px;
   }
 }
 
@@ -98,6 +119,7 @@
 
 .additional-product__text {
   padding-top: 85px;
+  margin: 0;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -105,8 +127,12 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 25px;
+    padding: 20px 0;
     max-width: 170px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
@@ -116,6 +142,10 @@
   @media (min-width: $tablet-width) {
     border: 1px solid #cdcdcd;
   }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+  }
 }
 
 .additional-product__item {
@@ -123,7 +153,7 @@
   border-top: 1px solid #cdcdcd;
 
   @media (min-width: $tablet-width) {
-    padding: 25px 40px;
+    padding: 20px 40px;
     display: grid;
     grid-template-columns: 1fr auto 100px;
     row-gap: 25px;
@@ -132,9 +162,13 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 15px 0;
     display: grid;
-    grid-template-columns: 380px auto 100px 244px;
+    grid-template-columns: 345px auto 100px 244px;
     row-gap: 0;
+    border: none;
+    border-top: 1px solid #cdcdcd;
+    align-items: center;
   }
 
   &:last-child {
@@ -146,6 +180,10 @@
   line-height: 14px;
   color: #444444;
   text-align: right;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 35px;
+  }
 }
 
 .additional-product__button {
