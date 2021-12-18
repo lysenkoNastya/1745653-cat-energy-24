@@ -66,6 +66,22 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
+    margin-left: -110px;
+  }
+}
+
+.promo__img {
+  width: 280px;
+  height: 270px;
+
+  @media (min-width: $tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 552px;
+    height: 449px;
   }
 }
 
@@ -77,8 +93,9 @@
   max-width: 280px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 15px;
+    padding-bottom: 15px;
     width: 244px;
-    top: 240px;
     bottom: auto;
     left: 242px;
     right: auto;

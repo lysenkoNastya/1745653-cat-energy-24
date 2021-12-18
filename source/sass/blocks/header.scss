@@ -52,3 +52,25 @@
     margin-right: 15px;
   }
 }
+
+.header__logo-catenergy {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__logo-img {
+  width: 34px;
+  height: 38px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
