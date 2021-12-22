@@ -39,13 +39,9 @@
   align-items: center;
 }
 
-.header__logo,
-.header__logo-catenergy {
+.header__logo {
   display: inline-block;
   cursor: pointer;
-}
-
-.header__logo {
   margin-right: 55px;
 
   @media (min-width: $tablet-width) {
@@ -53,14 +49,8 @@
   }
 }
 
-.header__logo-catenergy {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .header__logo-img {
-  width: 34px;
+  width: 191px;
   height: 38px;
 
   @media (min-width: $tablet-width) {
