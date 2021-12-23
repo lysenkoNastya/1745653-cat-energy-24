@@ -11,6 +11,15 @@
     background-size: auto, auto 100%;
     color: #ffffff;
     min-height: 694px;
+
+    @media (min-resolution: 2dppx),
+      (min-resolution: 1.5dppx) {
+      background: linear-gradient(to right, #ffffff 0 50%, rgba(104, 183, 56, 0.85) 50% 100%),
+        url("../img/index-background-desktop.png");
+      background-repeat: no-repeat;
+      background-position: 0, top right -320px;
+      background-size: auto, auto 100%;
+    }
   }
 }
 
@@ -39,13 +48,9 @@
   align-items: center;
 }
 
-.header__logo,
-.header__logo-catenergy {
+.header__logo {
   display: inline-block;
   cursor: pointer;
-}
-
-.header__logo {
   margin-right: 55px;
 
   @media (min-width: $tablet-width) {
@@ -53,14 +58,8 @@
   }
 }
 
-.header__logo-catenergy {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .header__logo-img {
-  width: 34px;
+  width: 191px;
   height: 38px;
 
   @media (min-width: $tablet-width) {

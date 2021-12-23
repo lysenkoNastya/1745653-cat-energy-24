@@ -30,16 +30,22 @@
   @media (min-width: $tablet-width) {
     padding: 60px 75px;
     justify-content: flex-end;
+    background: url("../img/icon_gift.svg"),
+      linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/gift-block-cat-tablet.png");
     background-position: 100px 100px, center, center;
+    background-repeat: no-repeat;
+    background-size: auto, auto, cover;
+    max-height: 200px;
 
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx),
+      (min-resolution: 1.5dppx) {
       background: url("../img/icon_gift.svg"),
         linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        url("../img/gift-block-cat-tablet.png");
-      background-repeat: no-repeat;
+        url("../img/gift-block-cat-tablet@2x.png");
       background-position: 90px 60px, center, center;
       background-size: auto, auto, cover;
-      max-height: 200px;
+      background-repeat: no-repeat;
     }
   }
 
