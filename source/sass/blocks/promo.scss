@@ -22,6 +22,15 @@
   background-position: center;
   color: #ffffff;
 
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/index-background-header@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: 100px;
     background-image: none;
