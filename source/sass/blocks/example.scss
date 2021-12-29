@@ -20,7 +20,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 450px 600px;
-    column-gap: 195px;
+    column-gap: 105px;
   }
 }
 
@@ -116,21 +116,117 @@
 .example__img-wrapper {
   margin-bottom: 15px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.example__cat-fit {
+  @media (min-width: $tablet-width) {
+    width: 592px;
+    height: auto;
+    left: 70px;
+  }
+}
+
+.example__cat-skinny {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 545px;
+    height: auto;
+    left: -245px;
+  }
 }
 
 .example__range-bar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: #ffffff;
+      border: 1px solid #cdcdcd;
+      width: 34px;
+      height: 34px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: $basic_green;
+      width: 8px;
+      height: 8px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: 2;
+    }
+  }
+}
+
+.example__range-mobile {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  display: block;
+  width: 35px;
+  height: 6px;
+  background-color: $basic_green;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .example__range-toggle {
+  padding: 0;
+  margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   border: none;
-  background-color: transparent;
+  background: transparent;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px dashed #cdcdcd;
+  }
+}
+
+.example__range {
+  position: absolute;
+  height: 14px;
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 86px;
+  border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    height: 6px;
+    background-color: #dcdcdc;
+    width: 426px;
+  }
 }
 
 .example__expenses-wrapper {
@@ -142,5 +238,22 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
+  }
+}
+
+.example__cat-wrapper {
+  @media (min-width: $tablet-width) {
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    height: 500px;
+  }
+}
+
+.example__img {
+  @media (min-width: $tablet-width) {
+    max-width: none;
+    position: absolute;
+    height: 100%;
   }
 }

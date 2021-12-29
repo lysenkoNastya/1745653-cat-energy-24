@@ -81,9 +81,11 @@
 
 .product__info-item {
   @media (min-width: $tablet-width) {
+    padding: 5px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
