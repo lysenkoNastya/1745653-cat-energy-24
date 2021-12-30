@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="body">
     <h1 class="visually-hidden">Кэт энерджи</h1>
@@ -125,12 +125,28 @@
           </div>
           <div class="example__slider-wrapper">
             <div class="example__img-wrapper">
-              <img class="example__img" src="img/cat-before-after.png" width="280" height="232" alt="Кот до похудения и после">
+              <div class="example__cat-wrapper">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-fat-tablet-desktop.webp 1x, img/cat-fat-tablet-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cat-before.webp 1x, img/cat-before@2x.webp 2x"> -->
+                  <source media="(min-width: 768px)" srcset="img/cat-fat-tablet-desktop.png 1x, img/cat-fat-tablet-desktop@2x.png 2x">
+                  <img class="example__img example__cat-fit" src="img/cat-before.png" width="280" height="232" alt="Кот до похудения">
+                </picture>
+              </div>
+              <div class="example__cat-wrapper">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x"> -->
+                  <source media="(min-width: 768px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x">
+                  <img class="example__img example__cat-skinny" src="img/cat-before.png" width="280" height="232" alt="Кот после похудения">
+                </picture>
+              </div>
             </div>
             <div class="example__range-bar">
               <button class="example__range-toggle example__toggle-before" type="button">Было</button>
               <div class="example__range">
                 <span class="visually-hidden">Отобразить прокрутку</span>
+                <span class="example__range-mobile"></span>
               </div>
               <button class="example__range-toggle example__toggle-after" type="button">Стало</button>
             </div>
