@@ -14,7 +14,7 @@
     <h1 class="visually-hidden">Форма «Кэт энерджи»</h1>
     <header class="header">
       <div class="header__wrapper">
-        <div class="header__wrapper-logo container">
+        <div class="header__wrapper-logo">
           <a class="header__logo">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
@@ -73,24 +73,24 @@
               <fieldset class="form-group__fieldset form-group__fieldset-radio">
                 <legend class="visually-hidden">Выбор программы</legend>
                 <ul class="form-group__list list-reset">
-                  <li class="form-group__item">
+                  <li class="form-group__item form-group__item-radio">
                     <label class="form-group__label">
-                      <input class="form-group-input" type="radio" name="program-selection"	value="slimming" checked>
-                      <span class="form-group__radio-mark"></span>
+                      <input class="form-group__marker-input" type="radio" name="program-selection"	value="slimming" checked>
+                      <span class="form-group__mark form-group__radio-mark"></span>
                       <span class="form-group__label form-group__radio-label">Похудение</span>
                     </label>
                   </li>
-                  <li class="form-group__item">
+                  <li class="form-group__item form-group__item-radio">
                     <label class="form-group__label">
-                      <input class="form-group-input" type="radio" name="program-selection"	value="weight-gain">
-                      <span class="form-group__radio-mark"></span>
+                      <input class="form-group__marker-input" type="radio" name="program-selection"	value="weight-gain">
+                      <span class="form-group__mark form-group__radio-mark"></span>
                       <span class="form-group__label form-group__radio-label">Набор массы</span>
                     </label>
                   </li>
-                  <li class="form-group__item">
+                  <li class="form-group__item form-group__item-radio">
                     <label class="form-group__label">
-                      <input class="form-group-input" type="radio" name="program-selection"	value="advice">
-                      <span class="form-group__radio-mark"></span>
+                      <input class="form-group__marker-input" type="radio" name="program-selection"	value="advice">
+                      <span class="form-group__mark form-group__radio-mark"></span>
                       <span class="form-group__label form-group__radio-label">Не знаю (Нужен ваш совет)</span>
                     </label>
                   </li>
@@ -104,12 +104,30 @@
               <ul class="form-group__list form-group__contacts-list list-reset">
                 <li class="form-group__item">
                   <label class="form-group__label form-group__email-icon">E-mail:<sup>*</sup>
-                    <input class="form-group__input" type="email" placeholder="kuklachev@gmail.com" name="email" required>
+                    <input class="form-group__input form-group__email-input" type="email" placeholder="kuklachev@gmail.com" name="email" required>
+                    <svg class="form-group__icon-svg" width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <line x1="1.1793" y1="6" x2="1.1793" y2="14" stroke-width="1.3"/>
+                      <line x1="18.1793" y1="6" x2="18.1793" y2="14" stroke-width="1.3"/>
+                      <line x1="0.529297" y1="13.35" x2="18.5293" y2="13.35" stroke-width="1.3"/>
+                      <line x1="0.529297" y1="1.35" x2="18.5293" y2="1.35" stroke-width="1.3"/>
+                      <path d="M17.8793 3.1821L9.52932 9.67654L1.1793 3.18209V1.65H4.0293L9.52932 1.65H14.5293H17.8793V3.1821Z" stroke-width="1.3"/>
+                    </svg>
                   </label>
                 </li>
                 <li class="form-group__item">
                   <label class="form-group__label form-group__phone-icon">Телефон:<sup>*</sup>
-                    <input class="form-group__input" type="tel" placeholder="8 (960) 900-60-90" name="load" required>
+                    <input class="form-group__input form-group__tel-input" type="tel" pattern="8 ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90" name="load" required>
+                    <svg class="form-group__icon-svg form-group__phone-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2403_1829)">
+                      <path d="M17.9 9.4H9.40002V10.6H17.9L15.8 12.7L16.7 13.6L19.8 10.5C19.8974 10.3702 19.95 10.2123 19.95 10.05C19.95 9.88772 19.8974 9.72982 19.8 9.6L16.7 6.5L15.8 7.4L17.9 9.4Z"/>
+                      <path d="M8.09995 19.4V13.2C8.0884 13.0447 8.02148 12.8987 7.91136 12.7886C7.80125 12.6785 7.65525 12.6116 7.49995 12.6H3.09995C3.1051 12.9167 3.23318 13.2189 3.45712 13.4428C3.68106 13.6668 3.9833 13.7949 4.29995 13.8H6.79995V18.8H3.09995C2.86319 18.8149 2.62585 18.7825 2.4017 18.7048C2.17756 18.6271 1.97109 18.5057 1.7943 18.3475C1.61751 18.1893 1.47393 17.9976 1.37189 17.7834C1.26986 17.5693 1.21142 17.337 1.19995 17.1V3.10001C1.19175 2.6373 1.3651 2.18977 1.68286 1.85331C2.00062 1.51686 2.43752 1.31824 2.89995 1.30001H6.79995V6.30001H4.39995C4.0833 6.30516 3.78106 6.43324 3.55712 6.65718C3.33318 6.88112 3.2051 7.18336 3.19995 7.50001H7.59995C7.75525 7.48846 7.90125 7.42154 8.01136 7.31142C8.12148 7.2013 8.1884 7.05531 8.19995 6.90001V0.600012C8.15226 0.443872 8.06111 0.304534 7.93715 0.198285C7.81319 0.0920352 7.66155 0.0232649 7.49995 1.23734e-05H3.09995C2.70593 -0.0133408 2.31315 0.0511002 1.94405 0.189651C1.57495 0.328202 1.23678 0.538145 0.948872 0.807477C0.660965 1.07681 0.428969 1.40025 0.266146 1.7593C0.103324 2.11835 0.0128689 2.50598 -4.64045e-05 2.90001V16.8C-0.0290254 17.1977 0.0245894 17.597 0.157426 17.9729C0.290263 18.3489 0.499448 18.6932 0.771825 18.9844C1.0442 19.2756 1.37388 19.5072 1.74012 19.6648C2.10637 19.8224 2.50126 19.9024 2.89995 19.9H7.49995C7.57344 19.915 7.64937 19.9133 7.7221 19.895C7.79484 19.8767 7.86253 19.8423 7.92015 19.7942C7.97777 19.7462 8.02385 19.6859 8.05497 19.6176C8.0861 19.5494 8.10147 19.475 8.09995 19.4Z"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_2403_1829">
+                      <rect width="20" height="20"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
                   </label>
                 </li>
               </ul>
@@ -118,38 +136,38 @@
               <legend class="form-group__title-wrapper">
                 <span class="form-group__title">Комментарий</span>
               </legend>
-              <textarea name="cat-habits" rows="10" placeholder="Расскажите обо всех повaдках кота"></textarea>
+              <textarea name="cat-habits" rows="7" placeholder="Расскажите обо всех повaдках кота"></textarea>
             </fieldset>
-            <fieldset class="form-group__fieldset form-group__fieldset--decor">
+            <fieldset class="form-group__fieldset form-group__fieldset--last form-group__fieldset--decor">
               <legend class="form-group__title-wrapper">
                 <span class="form-group__title">Дополнительно</span>
               </legend>
               <ul class="form-group__list form-group__list-checkbox list-reset">
                 <li class="form-group__item">
                   <label class="form-group__label form-group__label-checkbox">
-                    <input class="form-group__input" type="checkbox" name="program-selection"	value="slimming" checked>
-                    <span class="form-group__checkbox-mark"></span>
+                    <input class="form-group__marker-input" type="checkbox" name="program-selection"	value="slimming" checked>
+                    <span class="form-group__mark form-group__checkbox-mark"></span>
                     <span class="form-group__label-title">Сахарозаменитель</span>
                   </label>
                 </li>
                 <li class="form-group__item">
                   <label class="form-group__label form-group__label-checkbox">
-                    <input class="form-group__input" type="checkbox" name="program-selection"	value="weight-gain">
-                    <span class="form-group__checkbox-mark"></span>
+                    <input class="form-group__marker-input" type="checkbox" name="program-selection"	value="weight-gain">
+                    <span class="form-group__mark form-group__checkbox-mark"></span>
                     <span class="form-group__label-title">Питьевая вода</span>
                   </label>
                 </li>
                 <li class="form-group__item">
                   <label class="form-group__label form-group__label-checkbox">
-                    <input class="form-group__input" type="checkbox" name="program-selection"	value="advice">
-                    <span class="form-group__checkbox-mark"></span>
+                    <input class="form-group__marker-input" type="checkbox" name="program-selection"	value="advice">
+                    <span class="form-group__mark form-group__checkbox-mark"></span>
                     <span class="form-group__label-title">Молоко</span>
                   </label>
                 </li>
                 <li class="form-group__item">
                   <label class="form-group__label form-group__label-checkbox">
-                    <input class="form-group__input" type="checkbox" name="program-selection"	value="advice">
-                    <span class="form-group__checkbox-mark"></span>
+                    <input class="form-group__marker-input" type="checkbox" name="program-selection"	value="advice">
+                    <span class="form-group__mark form-group__checkbox-mark"></span>
                     <span class="form-group__label-title">Витамины</span>
                   </label>
                 </li>
@@ -180,7 +198,7 @@
       </section>
       <div class="footer__wrapper container">
         <a href="#" class="footer__logo-catenergy">
-          <img class="footer__img-catenergy" src="img/logo-catenergy.svg" width="101" height="18" alt="Логотип-текст Кэт-энерджи">
+          <img class="footer__img-catenergy" src="img/logo-catenergy.svg" width="128" height="24" alt="Логотип-текст Кэт-энерджи">
         </a>
         <div class="social">
           <ul class="social__list list-reset">
@@ -213,7 +231,7 @@
         <div class="footer__copyright copyright">
           <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="copyright__icon" width="60" height="60" viewBox="0 0 60 60" role="img" aria-label="HTML Academy">
+            <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" role="img" aria-label="HTML Academy">
               <use xlink:href="#htmlacademy"></use>
             </svg>
           </a>
@@ -229,8 +247,8 @@
         <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 22" id="icon-vkontakte">
           <path d="M0.0853271 5.48988C0.0853271 4.63485 0.60043 4.17381 1.63064 4.10674L5.60048 4.13189C5.86691 4.13189 6.04453 4.25763 6.13334 4.50911C6.54187 5.76651 6.99925 6.85206 7.50547 7.76577C8.01169 8.67948 8.67333 9.7315 9.49039 10.9218C9.56144 11.0727 9.6769 11.1482 9.83675 11.1482C9.96109 11.1482 10.0588 11.0895 10.1298 10.9721L10.2098 10.6955L10.2364 6.34491C10.2364 6.04313 10.1609 5.84195 10.0099 5.74136C9.85896 5.64077 9.5792 5.56532 9.17067 5.51503C8.85095 5.46473 8.6911 5.28031 8.6911 4.96177C8.6911 4.89471 8.69998 4.84442 8.71774 4.81089C9.09074 3.72114 10.1565 3.17627 11.9149 3.17627L13.4069 3.15112C14.0819 3.15112 14.6414 3.31039 15.0855 3.62893C15.5295 3.94747 15.7516 4.45043 15.7516 5.13781V10.8464C15.8759 10.9302 15.9913 10.9721 16.0979 10.9721C16.3643 10.9721 16.5953 10.8212 16.7906 10.5195C18.7445 7.93761 19.8013 6.21079 19.9612 5.33899C19.9612 5.32223 19.9789 5.28031 20.0145 5.21325C20.1388 4.96177 20.3431 4.74383 20.6273 4.55941C20.9115 4.37499 21.1601 4.24925 21.3733 4.18219C21.4443 4.14866 21.5243 4.13189 21.6131 4.13189H25.7428L26.0092 4.15704C26.3644 4.15704 26.6398 4.31631 26.8351 4.63485C26.9062 4.73544 26.955 4.84442 26.9817 4.96177C27.0083 5.07913 27.0261 5.19649 27.035 5.31385C27.0439 5.4312 27.0483 5.49826 27.0483 5.51503V5.69106C26.924 6.37844 26.6087 7.11192 26.1025 7.89151C25.5962 8.67109 24.9524 9.51355 24.1708 10.4189C23.3893 11.3242 22.9008 11.9194 22.7054 12.2044C22.5456 12.4056 22.4657 12.59 22.4657 12.7576C22.4657 12.8918 22.5367 13.0426 22.6788 13.2103L26.5687 17.8375C26.7819 18.1058 26.8884 18.3992 26.8884 18.7177C26.8884 19.1033 26.7286 19.4218 26.4089 19.6733C26.0891 19.9248 25.7072 20.0673 25.2632 20.1008L24.8103 20.126H20.7605C20.7427 20.126 20.7072 20.1302 20.6539 20.1385C20.6006 20.1469 20.5651 20.1511 20.5473 20.1511C20.1566 20.1511 19.7924 19.9919 19.455 19.6733C19.3306 19.5392 18.4958 18.55 16.9505 16.7059C16.8617 16.5885 16.7374 16.4795 16.5775 16.3789C16.5064 16.6472 16.4132 17.0328 16.2977 17.5357C16.1823 18.0387 16.0979 18.3992 16.0446 18.6171L15.9647 19.0446C15.7871 19.6314 15.4141 19.9835 14.8457 20.1008L14.4727 20.126H11.8616C10.3874 20.126 8.91756 19.4889 7.45218 18.2147C5.98681 16.9406 4.66797 15.2934 3.49566 13.2732C2.32336 11.2529 1.23099 8.90162 0.218543 6.21917C0.129733 6.00122 0.0853271 5.75813 0.0853271 5.48988ZM16.0979 12.0032C15.7249 12.0032 15.3874 11.9068 15.0855 11.714C14.7835 11.5212 14.6325 11.2571 14.6325 10.9218V5.13781C14.6325 4.8025 14.5437 4.5636 14.3661 4.42109C14.1885 4.27859 13.8776 4.20734 13.4336 4.20734L11.9149 4.25763C11.1512 4.25763 10.5739 4.38337 10.1831 4.63485C10.9647 4.98692 11.3554 5.55694 11.3554 6.34491V10.7709C11.3199 11.1901 11.1423 11.538 10.8226 11.8146C10.5028 12.0912 10.1476 12.2295 9.75682 12.2295C9.22396 12.2295 8.81543 11.9864 8.53124 11.5002C7.14579 9.52193 6.11558 7.64422 5.44062 5.8671L5.20083 5.21325L1.65728 5.18811C1.42637 5.18811 1.29759 5.20068 1.27095 5.22583C1.24431 5.25098 1.23099 5.32223 1.23099 5.43958C1.23099 5.59047 1.24875 5.74974 1.28427 5.9174L1.84378 7.32568C3.3358 10.9637 4.9566 13.8306 6.70617 15.9263C8.45575 18.0219 10.1742 19.0698 11.8616 19.0698H14.526C14.6325 19.0698 14.7125 19.0404 14.7658 18.9817C14.819 18.9231 14.8634 18.8099 14.899 18.6422L14.9523 18.3908L15.4585 16.1778C15.6006 15.876 15.7249 15.6748 15.8315 15.5742C16.0269 15.3898 16.2578 15.2976 16.5242 15.2976C16.9505 15.2976 17.3857 15.5407 17.8297 16.0269L20.0944 18.7428C20.2365 18.9608 20.3875 19.0698 20.5473 19.0698H24.9435C25.4763 19.0698 25.7428 18.944 25.7428 18.6925C25.7428 18.6087 25.7161 18.5249 25.6628 18.4411L21.7996 13.8893C21.4976 13.5372 21.3466 13.16 21.3466 12.7576C21.3466 12.3553 21.4887 11.9697 21.7729 11.6008C22.0038 11.2655 22.4523 10.7081 23.1184 9.92849C23.7845 9.1489 24.3662 8.41961 24.8635 7.74062C25.3609 7.06163 25.6895 6.4455 25.8493 5.89225L25.9293 5.56532C25.9115 5.53179 25.9026 5.47731 25.9026 5.40186C25.9026 5.32642 25.8938 5.26355 25.876 5.21325H21.693C21.4266 5.31385 21.2134 5.46473 21.0536 5.66592L20.8937 6.14373C20.4496 7.30053 19.2862 9.08603 17.4034 11.5002C17.0304 11.8355 16.5953 12.0032 16.0979 12.0032Z"></path>
         </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" id="htmlacademy">
-          <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"></path>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 34" id="htmlacademy">
+          <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"></path>
         </symbol>
       </svg>
     </footer>

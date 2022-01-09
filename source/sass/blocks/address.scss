@@ -10,7 +10,7 @@
   padding: 25px 20px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    padding: 56px 50px;
+    padding: 60px 45px;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,6 +24,14 @@
 
 .address__map-wrapper {
   height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 405px;
+  }
 }
 
 .address__map-wrapper iframe {
@@ -43,8 +51,8 @@
     content: "";
     background-color: #ffffff;
     color: #000000;
-    left: 110px;
-    top: 80px;
+    left: 20px;
+    top: 92px;
     width: 565px;
   }
 }
@@ -52,7 +60,6 @@
 .address__title {
   margin: 0;
   padding: 0;
-  margin-right: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -67,6 +74,10 @@
     font-size: 20px;
     line-height: 26px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 90px;
+  }
 }
 
 .address__text {
@@ -76,15 +87,28 @@
   max-width: 140px;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-top: -3px;
     max-width: 173px;
     text-align: right;
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.address__sub-text {
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding-top: 20px;
+  }
 }
 
 .address__text-streat {
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }

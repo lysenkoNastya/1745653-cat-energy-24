@@ -1,10 +1,19 @@
 .instruction {
+  padding-bottom: 28px;
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 25px;
+  }
+}
+
+.instruction .container {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 0 5px;
   }
 }
 
@@ -19,12 +28,12 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 230px);
-    column-gap: 80px;
+    column-gap: 95px;
   }
 }
 
 .instruction__item {
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   padding-left: 80px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
@@ -35,7 +44,9 @@
 
   @media (min-width: $tablet-width) {
     padding: 30px 0 70px;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -57,7 +68,10 @@
 
     @media (min-width: $tablet-width) {
       position: inherit;
-      top: -30px;
+      top: 0;
+      margin-bottom: 30px;
+      width: 80px;
+      height: 80px;
     }
   }
 
@@ -65,8 +79,8 @@
     @media (min-width: $tablet-width) {
       counter-increment: section;
       position: absolute;
-      right: 8px;
-      top: -35px;
+      right: -19px;
+      top: -13px;
       display: block;
       font-size: 280px;
       line-height: 280px;
@@ -91,5 +105,17 @@
 
   &--alarm::before {
     background-image: url("../img/icon_alarm.svg");
+  }
+}
+
+.instruction__title {
+  margin-bottom: 45px;
+}
+
+.instruction__item--leaf {
+  &::after {
+    @media (min-width: $tablet-width) {
+      right: -1px;
+    }
   }
 }

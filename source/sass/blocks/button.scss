@@ -11,8 +11,19 @@
   border: none;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: #cdcdcd;
+  }
 
   @media (min-width: $tablet-width) {
+    padding: 15px 0;
     font-size: 20px;
     line-height: 20px;
   }

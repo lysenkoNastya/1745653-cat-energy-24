@@ -5,12 +5,25 @@
   line-height: 18px;
   color: #444444;
   display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 25px;
+  }
 }
 
 .copyright__logo {
+  padding-top: 4px;
   display: inline-block;
 }
 
 .copyright__icon {
   fill: #666666;
+}
+
+.footer__copyright:hover .copyright__icon {
+  fill: $basic_green;
+}
+
+.footer__copyright:active .copyright__icon {
+  fill: $basic_green;
 }

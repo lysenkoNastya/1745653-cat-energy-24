@@ -58,6 +58,11 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
+//Manifest
+const copyManifest = () => {
+  return gulp.src('source/manifest.webmanifest')
+    .pipe(gulp.dest('build'))
+}
 // WebP
 
 export const createWebp = () => {
@@ -154,6 +159,7 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
+  copyManifest,
   gulp.parallel(
     styles,
     html,

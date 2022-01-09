@@ -1,5 +1,5 @@
 .nav {
-  padding-top: 20px;
+  padding-top: 15px;
   justify-self: flex-end;
   align-self: center;
   width: auto;
@@ -108,11 +108,11 @@
 
 .nav__item:not(:last-child) {
   @media (min-width: $tablet-width) {
-    margin-right: 20px;
+    margin-right: 36px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 36px;
+    margin-right: 35px;
   }
 }
 
@@ -124,10 +124,24 @@
   color: #000000;
   text-transform: uppercase;
   display: inline-block;
+  cursor: pointer;
+  letter-spacing: -0.03em;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.4;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 0.02rem;
   }
 }
 
@@ -135,6 +149,10 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 10px;
     border-bottom: 2px solid $basic_green;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 5px;
   }
 }
 
@@ -149,5 +167,12 @@
     color: #ffffff;
     font-size: 20px;
     line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 0;
   }
+}
+
+.nav__catalog .nav__toggle {
+  top: 45%;
+  right: 12px;
 }
