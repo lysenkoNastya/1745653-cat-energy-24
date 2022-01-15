@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
+    row-gap: 20px;
   }
 }
 
@@ -120,6 +121,7 @@
   color: #000000;
   display: inline-block;
   position: relative;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;

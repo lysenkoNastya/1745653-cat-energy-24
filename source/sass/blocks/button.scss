@@ -17,9 +17,18 @@
     background-color: #5eaa2f;
   }
 
+  &:focus {
+    opacity: 0.3;
+    background-color: #5eaa2f;
+  }
+
   &:active {
     background-color: #5eaa2f;
     color: #cdcdcd;
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 
   @media (min-width: $tablet-width) {

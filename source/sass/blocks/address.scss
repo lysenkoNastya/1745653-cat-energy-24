@@ -108,7 +108,55 @@
 }
 
 .address__text-streat {
+  margin-bottom: 1px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 22px;
+  }
+}
+
+.address-form .address__streat-wrapper {
+  align-self: flex-end;
+}
+
+.address-catalog-footer .address__text {
+  margin-top: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -3px;
+  }
+}
+
+.address-catalog-footer .address__sub-text {
+  display: inline-block;
+  margin-top: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.address-catalog-footer .address__title {
+  @media (min-width: $desktop-width) {
+    margin-right: 95px;
+  }
+}
+
+.no-js .address__map-wrapper {
+  background-image: url("../img/map-img-mobile.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  iframe {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/map-img-tablet.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/map-img-desctop.png");
   }
 }

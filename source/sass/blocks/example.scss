@@ -126,6 +126,10 @@
     line-height: 14px;
     background-color: #ffffff;
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: #f2f2f2;
+  }
 }
 
 .example__costs {
@@ -205,50 +209,15 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 70px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      background: #ffffff;
-      border: 1px solid #cdcdcd;
-      width: 34px;
-      height: 34px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      z-index: 1;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
-      cursor: pointer;
-    }
-
-    &::before {
-      position: absolute;
-      content: "";
-      background: $basic_green;
-      width: 8px;
-      height: 8px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      z-index: 2;
-      cursor: pointer;
-    }
-
-    &:hover::after {
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    &:active::after {
-      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
-      border-color: $basic_green;
-    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 10px 0 18px;
   }
+}
+
+.example__range-bar button {
+  outline: none;
 }
 
 .example__range-mobile {
@@ -307,6 +276,50 @@
   transform: translate(-50%, -50%);
   width: 86px;
   border-radius: 6px;
+
+
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: #ffffff;
+      border: 1px solid #cdcdcd;
+      width: 34px;
+      height: 34px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: 1;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: $basic_green;
+      width: 8px;
+      height: 8px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    &:hover::after {
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    &:active::after {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+      border-color: $basic_green;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     height: 6px;

@@ -21,14 +21,14 @@
   display: grid;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(2, 230px);
-    column-gap: 153px;
+    grid-template-columns: repeat(2, 255px);
+    column-gap: 130px;
     counter-reset: section;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 230px);
-    column-gap: 95px;
+    grid-template-columns: repeat(4, 250px);
+    column-gap: 75px;
   }
 }
 
@@ -79,7 +79,7 @@
     @media (min-width: $tablet-width) {
       counter-increment: section;
       position: absolute;
-      right: -19px;
+      right: 9px;
       top: -13px;
       display: block;
       font-size: 280px;
@@ -88,6 +88,10 @@
       color: #f2f2f2;
       z-index: -1;
       content: counters(section, ".") "";
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 0;
     }
   }
 
@@ -115,7 +119,11 @@
 .instruction__item--leaf {
   &::after {
     @media (min-width: $tablet-width) {
-      right: -1px;
+      right: 23px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 20px;
     }
   }
 }

@@ -6,24 +6,34 @@
   color: #444444;
   display: inline-block;
 
+  &:focus-visible {
+    outline: none;
+  }
+
   @media (min-width: $tablet-width) {
     margin-right: 25px;
   }
 }
 
-.copyright__logo {
+.copyright-logo {
   padding-top: 4px;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
 }
 
 .copyright__icon {
-  fill: #666666;
+  stroke: #666666;
+  fill: transparent;
 }
 
-.footer__copyright:hover .copyright__icon {
-  fill: $basic_green;
+.copyright:hover .copyright__icon,
+.copyright:active .copyright__icon,
+.copyright:focus .copyright__icon {
+  stroke: $basic_green;
 }
 
-.footer__copyright:active .copyright__icon {
-  fill: $basic_green;
+.copyright:active {
+  opacity: 0.3;
 }

@@ -1,5 +1,5 @@
 .additional-product {
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 24px;
+    margin-bottom: 86px;
   }
 }
 
@@ -48,7 +48,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 60px 145px 69px 75px;
+    padding: 60px 120px 69px 75px;
     justify-content: flex-end;
     background: url("../img/icon_gift.svg"),
       linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
@@ -56,7 +56,7 @@
     background-position: 81px 59px, center, center;
     background-repeat: no-repeat;
     background-size: auto, auto, cover;
-    max-height: 200px;
+    min-height: 200px;
 
     @media (min-resolution: 2dppx),
       (min-resolution: 1.5dppx) {
@@ -70,14 +70,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 35px 45px 40px;
+    padding: 40px 35px 41px 35px;
     background: url("../img/icon_gift.svg"),
       linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../img/gift-block-cat-desktop.png");
     background-repeat: no-repeat;
-    background-position: 87px 55px, center, center;
+    background-position: 85px 60px, center, center;
     background-size: auto, auto, cover;
-    max-height: 289px;
+    min-height: 289px;
     max-width: 245px;
 
     @media (min-resolution: 2dppx),
@@ -85,14 +85,14 @@
       background: url("../img/icon_gift.svg"),
         linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
         url("../img/gift-block-cat-desktop@2x.png");
-      background-position: 87px 55px, center, center;
+      background-position: 85px 60px, center, center;
       background-size: auto, auto, cover;
       background-repeat: no-repeat;
     }
   }
 }
 
-.additional-product__title--decor {
+.additional-product__title-decor {
   background-color: #ffffff;
   display: inline-block;
 
@@ -104,6 +104,7 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 14px;
+    margin-left: -24px;
   }
 }
 
@@ -119,12 +120,6 @@
   position: relative;
   display: inline-block;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 80px;
-    font-size: 36px;
-    line-height: 36px;
-  }
-
   &::after {
     position: absolute;
     content: "";
@@ -139,18 +134,27 @@
     @media (min-width: $tablet-width) {
       left: -100vw;
     }
+
+    @media (min-width: $desktop-width) {
+      top: 67%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+    font-size: 36px;
+    line-height: 36px;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 36px;
-    line-height: 36px;
+    margin: 0 20px 78px 26px;
   }
 }
 
 .additional-product__item-title {
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -178,14 +182,20 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  letter-spacing: 0.01rem;
 
   @media (min-width: $tablet-width) {
     padding-top: 12px;
     max-width: 170px;
+    text-align: left;
+    letter-spacing: 0.01rem;
+    padding-left: 3px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    max-width: none;
+    text-align: center;
   }
 }
 
@@ -199,16 +209,17 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 16px;
+    margin-bottom: 0;
     border: none;
   }
 }
 
 .additional-product__item {
-  padding: 13px 0 20px;
+  padding: 13px 0 19px;
   border-top: 1px solid #cdcdcd;
 
   @media (min-width: $tablet-width) {
-    padding: 20px 40px 30px;
+    padding: 22px 40px 27px;
     display: grid;
     grid-template-columns: 1fr auto;
     row-gap: 18px;
@@ -217,7 +228,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0;
+    padding: 15px 0 16px;
     display: grid;
     grid-template-columns: 324px 325px 244px;
     row-gap: 0;
@@ -264,7 +275,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 10px;
-    margin-right: 35px;
+    margin-right: 38px;
     font-size: 16px;
     line-height: 20px;
   }
@@ -288,4 +299,16 @@
 .additional-product__characteristic-price {
   text-align: right;
   display: inline-block;
+}
+
+.additional-product__characteristic-text--decor {
+  @media (min-width: $tablet-width) {
+    margin-right: 8px;
+  }
+}
+
+.additional-product__characteristic-text--decor + span {
+  @media (min-width: $desktop-width) {
+    margin-right: 48px;
+  }
 }
