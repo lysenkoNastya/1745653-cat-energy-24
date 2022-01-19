@@ -1,5 +1,6 @@
 .additional-product {
   margin-bottom: 40px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -19,6 +20,12 @@
 
 .additional-product__wrapper {
   @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 900px 260px;
+    column-gap: 20px;
+  }
+
+  @media (min-width: $desktop-width-lg) {
     display: grid;
     grid-template-columns: 1fr 260px;
     column-gap: 80px;

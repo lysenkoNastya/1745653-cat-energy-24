@@ -10,7 +10,7 @@
   }
 }
 
-.header-index {
+.header--index {
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
@@ -19,7 +19,8 @@
 
   @media (min-width: $desktop-width) {
     background: linear-gradient(to right, #ffffff 0 50%, rgba(104, 183, 56, 0.85) 50% 100%),
-      url("../img/index-background-desktop.png");
+      url("../img/index-background-desktop.png"),
+      linear-gradient(to right, #ffffff 0 50%, #535259 50%);
     background-repeat: no-repeat;
     background-position: 0, top right -320px;
     background-size: auto, auto 100%;
@@ -50,8 +51,7 @@
     @media (min-resolution: 2dppx),
       (min-resolution: 1.5dppx) {
       background: linear-gradient(to right, #ffffff 0 50%, rgba(104, 183, 56, 0.85) 50% 100%),
-        url("../img/index-background-desktop@2x.png"),
-        linear-gradient(to right, #ffffff 0 50%, #535259 50%);
+        url("../img/index-background-desktop@2x.png");
       background-repeat: no-repeat;
       background-position: 0, top right -103px;
       background-size: auto, auto 100%;
@@ -59,7 +59,7 @@
   }
 }
 
-.header-form {
+.header--form {
   margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
@@ -93,14 +93,18 @@
   }
 }
 
-.header-form .header__wrapper {
+.header--form .header__wrapper {
   padding: 1px 20px 0;
 
   @media (min-width: $tablet-width) {
     padding: 20px 31px 0 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-width-md) and (max-width: $desktop-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width-lg) {
     padding: 0;
     padding-top: 50px;
   }
@@ -151,7 +155,7 @@
   }
 }
 
-.header-index .header__wrapper {
+.header--index .header__wrapper {
   padding: 0;
 
   @media (min-width: $tablet-width) {
@@ -163,13 +167,13 @@
   }
 }
 
-.header-index .header__wrapper-logo {
+.header--index .header__wrapper-logo {
   @media (min-width: $desktop-width) {
     padding: 0;
   }
 }
 
-.header-catalog .header__wrapper {
+.header--catalog .header__wrapper {
   padding: 0 30px 0 20px;
 
   @media (min-width: $tablet-width) {
@@ -182,8 +186,12 @@
   }
 }
 
-.header-catalog {
+.header--catalog {
   margin-bottom: 0;
+
+  @media (min-width: $desktop-width-md) {
+    padding: 0 20px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 72px;

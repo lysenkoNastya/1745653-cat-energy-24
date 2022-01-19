@@ -28,6 +28,11 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 250px);
+    column-gap: 35px;
+  }
+
+  @media (min-width: $desktop-width-lg) {
+    grid-template-columns: repeat(4, 250px);
     column-gap: 75px;
   }
 }
