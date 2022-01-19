@@ -163,6 +163,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    margin: 0 0 8px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -219,7 +220,7 @@
   border-top: 1px solid #cdcdcd;
 
   @media (min-width: $tablet-width) {
-    padding: 22px 40px 27px;
+    padding: 25px 40px 27px;
     display: grid;
     grid-template-columns: 1fr auto;
     row-gap: 18px;

@@ -1,5 +1,5 @@
 .example {
-  padding: 28px 0 40px;
+  padding: 28px 0 34px;
   background-color: #eaeaea;
   color: #000000;
 
@@ -164,7 +164,7 @@
 }
 
 .example__img-wrapper {
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -280,24 +280,35 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 70px;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 6px;
+    background-color: #dcdcdc;
+    width: 426px;
+  }
+}
+
+.example__button-range {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: "";
+    background: #ffffff;
+    border: 1px solid #cdcdcd;
+    width: 34px;
+    height: 34px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+    display: block;
 
     &::after {
-      position: absolute;
-      content: "";
-      background: #ffffff;
-      border: 1px solid #cdcdcd;
-      width: 34px;
-      height: 34px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      z-index: 1;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
-      cursor: pointer;
-    }
-
-    &::before {
       position: absolute;
       content: "";
       background: $basic_green;
@@ -311,20 +322,14 @@
       cursor: pointer;
     }
 
-    &:hover::after {
+    &:hover {
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
     }
 
-    &:active::after {
+    &:active {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
       border-color: $basic_green;
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    height: 6px;
-    background-color: #dcdcdc;
-    width: 426px;
   }
 }
 

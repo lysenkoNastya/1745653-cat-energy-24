@@ -24,14 +24,13 @@
 }
 
 .copyright__icon {
-  stroke: #666666;
-  fill: transparent;
+  fill: #666666;
 }
 
 .copyright:hover .copyright__icon,
 .copyright:active .copyright__icon,
 .copyright:focus .copyright__icon {
-  stroke: $basic_green;
+  fill: $basic_green;
 }
 
 .copyright:active {

@@ -32,8 +32,8 @@
 .social__list-index {
   margin-top: 0;
 
-  @media (min-width: $desktop-width) {
-    margin-top: -7px;
+  @media (min-width: $tablet-width) {
+    margin-top: 3px;
   }
 }
 
@@ -46,24 +46,16 @@
 }
 
 .social__icon {
-  stroke: #666666;
-  object-fit: contain;
-  fill: transparent;
-  object-position: center;
   width: 100%;
   height: auto;
-
-  &:hover {
-    fill: $basic_green;
-  }
-
-  &:active {
-    fill: $basic_green;
-    opacity: 0.3;
-  }
+  fill: #666666;
+  object-fit: contain;
+  object-position: center;
 }
 
 .social__link--facebook {
+  stroke: #666666;
+
   @media (min-width: $tablet-width) {
     width: 30px;
     height: 33px;
@@ -75,7 +67,6 @@
   height: 16px;
 
   @media (min-width: $tablet-width) {
-    margin-right: 11px;
     width: 28px;
     height: 23px;
   }
@@ -86,7 +77,7 @@
   margin-right: 35px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 20px 0 17px;
+    margin: 0 20px 0 26px;
     width: 25px;
     height: 22px;
   }
@@ -104,12 +95,16 @@
 
 .social__link:hover .social__icon,
 .social__link:focus .social__icon {
+  fill: $basic_green;
+}
+
+.social__link--facebook:hover .social__icon,
+.social__link--facebook:focus .social__icon {
+  fill: none;
   stroke: $basic_green;
-  fill: transparent;
 }
 
 .social__link:active .social__icon {
-  stroke: $basic_green;
-  fill: transparent;
+  fill: $basic_green;
   opacity: 0.3;
 }

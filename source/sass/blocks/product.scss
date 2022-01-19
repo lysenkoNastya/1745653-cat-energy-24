@@ -1,8 +1,15 @@
 .product {
+  margin: 0 auto;
   margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 720px;
+    padding: 0 5px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 75px;
+    max-width: 1260px;
   }
 }
 
@@ -15,38 +22,28 @@
 .product__list {
   display: grid;
   margin: 0 auto 20px;
-  max-width: auto;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 60px;
-    row-gap: 91px;
-    margin-bottom: 67px;
-  }
-
-  @media (min-width: $desktop-width-md) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 93px 60px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: $desktop-width-lg) {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 77px;
-    row-gap: 57px;
+    max-width: 1220px;
+    margin-bottom: 63px;
     margin-left: 0;
     margin-right: 0;
-
-    @media (min-resolution: 2dppx),
-      (min-resolution: 1.5dppx) {
-      max-width: 1200px;
-    }
+    padding: 0 15px;
+    gap: 57px 81px;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .product__item {
-  padding: 20px 0 21px;
-  border-top: 1px solid #ebebeb;
   display: grid;
+  padding: 20px 20px 21px;
+  border-top: 1px solid #ebebeb;
   grid-template-columns: repeat(2, 1fr);
 
   @media (min-width: $tablet-width) {
@@ -60,7 +57,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 17px 3px 41px 0;
+    padding: 17px 0 41px;
     min-height: 430px;
     grid-template-columns: 245px;
     grid-template-rows: minmax(70px, 200px) minmax(101px, 1fr) 60px;
@@ -69,26 +66,56 @@
 }
 
 .product__item--last {
-  padding-top: 15px;
+  padding-top: 80px;
   text-align: center;
   border-bottom: 1px solid #ebebeb;
   background: none;
   grid-template-columns: 1fr;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     border: 1px solid #ebebeb;
+    padding: 125px 30px 11px;
     margin-top: 44px;
     display: grid;
-    grid-template-rows: 100px 83px 120px;
+    grid-template-rows: 82px 77px 85px;
     min-height: 430px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 35px 40px;
     margin-top: 87px;
     display: grid;
-    grid-template-rows: 115px 83px 116px;
-    min-height: 430px;
+    grid-template-rows: 81px 77px 82px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 50%;
+    top: 41px;
+    background-color: #d3d3d3;
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      top: 82px;
+      left: 50%;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 78px;
+      left: 49%;
+    }
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  &::after {
+    transform: translateX(-50%) rotate(-180deg);
   }
 }
 
@@ -96,7 +123,7 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 14px;
+    margin-top: 13px;
   }
 
   @media (min-width: $desktop-width) {
@@ -143,7 +170,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 4px 40px 4px 47px;
+    margin: 2px 38px 4px 43px;
   }
 }
 
@@ -167,16 +194,18 @@
 }
 
 .product__title {
-  padding: 27px 0 40px;
+  padding: 27px 20px 40px;
   margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 80px;
+    margin-bottom: 120px;
+    padding: 0;
     padding-top: 55px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
+    padding: 0 15px;
+    margin-bottom: 80px;
   }
 }
 
@@ -193,7 +222,7 @@
 
   @media (min-width: $tablet-width) {
     text-align: center;
-    padding: 0 52px;
+    padding: 0 52px 0 53px;
     margin-bottom: 14px;
     font-size: 20px;
     line-height: 24px;
@@ -201,7 +230,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 3px 10px 0;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     font-size: 20px;
     line-height: 21px;
   }
@@ -215,6 +244,10 @@
     margin-bottom: 0;
     padding-top: 34px;
     padding-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 6px;
   }
 }
 
@@ -243,8 +276,9 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    margin-left: -5px;
     padding: 0;
-    padding-top: 11px;
+    padding-top: 14px;
   }
 }
 
@@ -272,6 +306,10 @@
     color: rgba(68, 68, 68, 0.3);
     background-color: #ebebeb;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
+  }
 }
 
 .product__button {
@@ -284,12 +322,13 @@
   @media (min-width: $tablet-width) {
     margin: 1px 6px 5px;
     padding: 11px 0;
-    width: auto;
+    max-width: 249px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 18px 38px 0;
     padding: 11px 0 10px;
+    max-width: 168px;
   }
 }
 
@@ -350,51 +389,13 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin: -24px auto 20px;
+    margin: -24px auto 12px;
     width: 168px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: -30px auto 63px;
+    margin: -30px auto 41px;
     width: 172px;
-  }
-}
-
-.product__plus {
-  position: relative;
-  min-height: 65px;
-
-  @media (min-width: $tablet-width) {
-    min-height: 100px;
-    margin-bottom: 0;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 37px;
-    width: 30px;
-    height: 2px;
-    left: 50%;
-    background-color: #d3d3d3;
-
-    @media (min-width: $tablet-width) {
-      width: 60px;
-      bottom: 32px;
-    }
-
-    @media (min-width: $desktop-width) {
-      bottom: 34px;
-    }
-  }
-
-  &::before {
-    transform: translateX(-50%) rotate(90deg);
-  }
-
-  &::after {
-    transform: translateX(-50%) rotate(-180deg);
   }
 }
 
@@ -418,13 +419,14 @@
 
 .product__item--last .product__btn {
   @media (min-width: $tablet-width) {
-    padding: 7px 5px 3px;
-    margin: 0 -3px 3px -1px;
+    max-width: 249px;
+    margin: auto auto 0;
+    padding-bottom: 12px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 7px 5px 3px;
-    margin: 1px -3px 0 -1px;
+    max-width: 168px;
+    margin: auto auto 0 5px;
   }
 }
 
@@ -448,7 +450,7 @@
 
 .product__info-value {
   @media (min-width: $desktop-width) {
-    margin-right: 3px;
+    margin-right: 5px;
     display: inline-block;
   }
 }

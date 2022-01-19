@@ -14,7 +14,7 @@
 }
 
 .promo__container {
-  padding: 30px 20px 130px;
+  padding: 27px 20px 133px;
   background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
     url("../img/index-background-header.png");
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 45px;
-    margin-left: 100px;
+    margin-left: 98px;
     background-image: none;
     max-width: 460px;
     text-align: left;
@@ -42,6 +42,7 @@
   @media (min-width: $desktop-width) {
     width: 500px;
     margin-left: 60px;
+    padding-top: 72px;
   }
 }
 
@@ -116,8 +117,8 @@
   max-width: 280px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 18px;
+    padding-bottom: 17px;
     width: 244px;
     bottom: auto;
     left: 242px;
@@ -125,7 +126,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    bottom: 142px;
-    left: 200px;
+    bottom: 143px;
+    left: 202px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
