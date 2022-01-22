@@ -10,16 +10,13 @@
   padding: 25px 20px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    padding: 60px 45px;
+    padding: 60px 40px;
   }
 
   @media (min-width: $desktop-width) {
+    position: relative;
     padding: 0;
   }
-}
-
-.address__position.container {
-  position: relative;
 }
 
 .address__map-wrapper {
@@ -46,12 +43,12 @@
   justify-content: space-between;
 
   @media (min-width: $desktop-width) {
-    padding: 60px 80px;
+    padding: 58px 80px;
     position: absolute;
     content: "";
     background-color: #ffffff;
     color: #000000;
-    left: 20px;
+    left: 0;
     top: 96px;
     width: 565px;
   }
@@ -122,12 +119,6 @@
   align-self: flex-end;
 }
 
-.address-form .address__text-wrapper {
-  @media (min-width: $desktop-width) {
-    padding: 57px 80px 60px;
-  }
-}
-
 .address-catalog-footer .address__text {
   margin-top: 3px;
 
@@ -155,7 +146,7 @@
 
 .address-catalog-footer .address__title {
   @media (min-width: $desktop-width) {
-    margin-right: 95px;
+    margin-right: 96px;
   }
 }
 

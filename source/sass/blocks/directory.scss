@@ -12,7 +12,7 @@
 
 .directory .container {
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    padding: 0 5px;
+    padding: 0;
   }
 }
 
@@ -31,7 +31,7 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding: 64px 315px 58px 53px;
+    padding: 68px 315px 58px 53px;
   }
 
   @media (min-width: $desktop-width) {
@@ -68,7 +68,7 @@
 
 .directory__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   padding-top: 9px;
   padding-left: 70px;
   font-family: "Oswald", "Arial", sans-serif;

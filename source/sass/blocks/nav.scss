@@ -164,13 +164,13 @@
   }
 }
 
-.nav-index .nav__active {
+.nav--index .nav__active {
   @media (min-width: $desktop-width) {
     border-bottom: 2px solid #ffffff;
   }
 }
 
-.nav-index .nav__link {
+.nav--index .nav__link {
   @media (min-width: $desktop-width) {
     color: #ffffff;
     font-size: 20px;

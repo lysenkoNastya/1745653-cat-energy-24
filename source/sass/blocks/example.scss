@@ -1,5 +1,5 @@
 .example {
-  padding: 28px 0 34px;
+  padding: 32px 0 34px;
   background-color: #eaeaea;
   color: #000000;
 
@@ -19,7 +19,7 @@
 
 .example .container {
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    padding: 0 5px;
+    padding: 0;
   }
 }
 

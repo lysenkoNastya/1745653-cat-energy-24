@@ -1,13 +1,13 @@
 .content {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 57px;
+    padding-bottom: 57px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 83px;
+    padding-bottom: 83px;
   }
 }
 
@@ -36,7 +36,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 64px;
-    margin-left: 25px;
+    margin-left: 10px;
   }
 
   @media (min-width: $desktop-width) {
