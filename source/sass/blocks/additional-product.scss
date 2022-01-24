@@ -6,17 +6,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 88px;
+    padding: 0 15px 88px;
   }
 
   &--decor {
     overflow: hidden;
-  }
-}
-
-.additional-product .container {
-  @media (min-width: $tablet-width) {
-    padding: 0;
   }
 }
 

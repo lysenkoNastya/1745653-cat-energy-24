@@ -33,13 +33,7 @@
     padding-bottom: 35px;
   }
 
-  @media (min-width: $desktop-width-md) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 93px 60px;
-    padding: 0 auto 20px;
-  }
-
-  @media (min-width: $desktop-width-lg) {
+  @media (min-width: $desktop-width) {
     max-width: 1220px;
     margin-bottom: 63px;
     padding: 0 15px;
@@ -183,6 +177,10 @@
   @media (min-width: $desktop-width) {
     margin: 2px 38px 4px 43px;
   }
+
+  &:focus {
+    opacity: 0.7;
+  }
 }
 
 .product__link-img {
@@ -190,7 +188,7 @@
   outline: none;
 
   &:focus {
-    opacity: 0.3;
+    opacity: 0.8;
   }
 
   @media (min-width: $tablet-width) {

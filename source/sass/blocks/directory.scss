@@ -10,12 +10,6 @@
   }
 }
 
-.directory .container {
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    padding: 0;
-  }
-}
-
 .directory__list {
   @media (min-width: $desktop-width) {
     display: grid;
@@ -153,7 +147,8 @@
     background-image: url("../img/icon_arrow_hover.svg");
   }
 
-  &:active {
+  &:active,
+  &:focus {
     opacity: 0.6;
   }
 }
