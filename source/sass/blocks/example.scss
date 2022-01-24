@@ -254,7 +254,8 @@
     line-height: 30px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     @media (min-width: $tablet-width) {
       border-bottom: 1px solid #cdcdcd;
     }
