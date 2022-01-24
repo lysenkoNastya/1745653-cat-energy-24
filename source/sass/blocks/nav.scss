@@ -1,5 +1,5 @@
 .nav {
-  padding-top: 20px;
+  padding-top: 15px;
   justify-self: flex-end;
   align-self: center;
   width: auto;
@@ -42,7 +42,8 @@
   box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
 }
 
-.nav--opened .nav__list {
+.nav--opened .nav__list,
+.no-js .nav__list {
   @media (max-width: $tablet-width) {
     position: absolute;
     left: 0;
@@ -54,7 +55,8 @@
   }
 }
 
-.nav--opened .nav__toggle {
+.nav--opened .nav__toggle,
+.no-js .nav__toggle {
   &::before,
   &::after {
     content: "";
@@ -83,6 +85,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -108,11 +111,11 @@
 
 .nav__item:not(:last-child) {
   @media (min-width: $tablet-width) {
-    margin-right: 20px;
+    margin-right: 36px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 36px;
+    margin-right: 35px;
   }
 }
 
@@ -124,30 +127,72 @@
   color: #000000;
   text-transform: uppercase;
   display: inline-block;
+  cursor: pointer;
+  letter-spacing: -0.03em;
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.4;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
   }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 0.02rem;
+  }
 }
 
 .nav__active {
+  &:focus {
+    opacity: 0.4;
+  }
+
   @media (min-width: $tablet-width) {
     padding-bottom: 10px;
     border-bottom: 2px solid $basic_green;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 5px;
+  }
 }
 
-.nav__index .nav__active {
+.nav--index .nav__active {
   @media (min-width: $desktop-width) {
     border-bottom: 2px solid #ffffff;
   }
 }
 
-.nav__index .nav__link {
+.nav--index .nav__link {
   @media (min-width: $desktop-width) {
     color: #ffffff;
     font-size: 20px;
     line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}
+
+.nav-catalog .nav__toggle {
+  top: 50%;
+  right: 12px;
+}
+
+.nav-catalog .nav__item:not(:last-child) {
+  @media (min-width: $desktop-width) {
+    margin-right: 37px;
+  }
+}
+
+.nav-form .nav__item:not(:last-child) {
+  @media (min-width: $desktop-width) {
+    margin-right: 38px;
   }
 }

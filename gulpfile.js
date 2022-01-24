@@ -58,6 +58,11 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
+//Manifest
+const copyManifest = () => {
+  return gulp.src('source/manifest.webmanifest')
+    .pipe(gulp.dest('build'))
+}
 // WebP
 
 export const createWebp = () => {
@@ -69,11 +74,6 @@ export const createWebp = () => {
 }
 
 // SVG
-
-const svg = () =>
-  gulp.src(['source/img/*.svg'])
-    .pipe(svgo())
-    .pipe(gulp.dest('build/img'));
 
 const sprite = () => {
   return gulp.src('source/img/*.svg')
@@ -131,7 +131,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/**/*.html', gulp.series(html, reload));
 }
 
 // Build
@@ -144,7 +144,6 @@ export const build = gulp.series(
     styles,
     html,
     scripts,
-    svg,
     sprite,
     createWebp
   ),
@@ -154,11 +153,11 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
+  copyManifest,
   gulp.parallel(
     styles,
     html,
     scripts,
-    svg,
     sprite,
     createWebp
   ),

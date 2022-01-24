@@ -5,12 +5,34 @@
   line-height: 18px;
   color: #444444;
   display: inline-block;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 25px;
+  }
 }
 
-.copyright__logo {
-  display: inline-block;
+.copyright-logo {
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
 }
 
 .copyright__icon {
   fill: #666666;
+}
+
+.copyright:hover .copyright__icon,
+.copyright:active .copyright__icon,
+.copyright:focus .copyright__icon {
+  fill: $basic_green;
+}
+
+.copyright:active {
+  opacity: 0.3;
 }

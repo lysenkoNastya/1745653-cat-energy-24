@@ -11,8 +11,28 @@
   border: none;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:focus {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
 
   @media (min-width: $tablet-width) {
+    padding: 15px 0;
     font-size: 20px;
     line-height: 20px;
   }
