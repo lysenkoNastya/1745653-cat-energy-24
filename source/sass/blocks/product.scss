@@ -17,12 +17,6 @@
   }
 }
 
-.product.container {
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    padding: 0 5px;
-  }
-}
-
 .product__list {
   display: grid;
   padding: 0 auto 20px;

@@ -18,13 +18,15 @@
   <h1 class="visually-hidden">Кэт энерджи</h1>
   <header class="header header--index">
     <div class="header__wrapper">
-      <a class="header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт-энерджи">
-        </picture>
-      </a>
+      <div class="header__wrapper-logo">
+        <a class="header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт-энерджи">
+          </picture>
+        </a>
+      </div>
       <nav class="nav nav--index">
         <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -129,16 +131,20 @@
           <div class="example__img-wrapper">
             <div class="example__cat-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/cat-fat-tablet-desktop.webp 1x, img/cat-fat-tablet-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-fat-tablet-desktop.webp 1x, img/cat-fat-tablet-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/cat-before.webp 1x, img/cat-before@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/cat-fat-tablet-desktop.png 1x, img/cat-fat-tablet-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/cat-fat-tablet-desktop.png 1x, img/cat-fat-tablet-desktop@2x.png 2x">
                 <img class="example__img example__cat-fit" src="img/cat-before.png" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x" width="280" height="232" alt="Кот до похудения">
               </picture>
             </div>
             <div class="example__cat-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
                 <source type="image/webp" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x">
                 <img class="example__img example__cat-skinny" src="img/cat-skinny.png" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x" width="280" height="232" alt="Кот после похудения">
               </picture>
@@ -202,9 +208,9 @@
           </li>
         </ul>
       </div>
-      <a class="copyright copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">HTML Academy</span>
-        <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" role="img" aria-label="Логотип HTML Academy">
+        <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" role="img" aria-label="Лого HTML Academy">
           <use xlink:href="img/sprite.svg#htmlacademy"></use>
         </svg>
       </a>

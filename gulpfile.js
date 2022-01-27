@@ -32,16 +32,16 @@ export const styles = () => {
 // HTML
 
 export const html = () => {
-  return gulp.src("source/*.html")
+  return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/main.js")
-    .pipe(gulp.dest("build/js"))
+  return gulp.src('source/js/main.js')
+    .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
 
@@ -140,19 +140,6 @@ const watcher = () => {
 export const build = gulp.series(
   clean,
   copy,
-  optimizeImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    sprite,
-    createWebp
-  ),
-);
-
-export default gulp.series(
-  clean,
-  copy,
   copyImages,
   copyManifest,
   gulp.parallel(
@@ -161,7 +148,11 @@ export default gulp.series(
     scripts,
     sprite,
     createWebp
-  ),
+  )
+);
+
+export default gulp.series(
+  build,
   gulp.series(
     server,
     watcher
